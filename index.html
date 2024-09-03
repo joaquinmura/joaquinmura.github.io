@@ -7,19 +7,20 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a;
-            color: #f0f0f0;
+            background-color: #ffffff;
+            color: #000000;
             margin: 0;
             padding: 0;
+            display: flex;
         }
         header {
-            background-color: #333;
+            background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
             position: relative;
         }
         header h1 {
-            color: #00aaff;
+            color: #000000;
             margin: 0;
         }
         .language-switch {
@@ -28,36 +29,39 @@
             right: 20px;
         }
         .language-switch button {
-            background-color: #00aaff;
-            color: #fff;
+            background-color: #000000;
+            color: #ffffff;
             border: none;
             padding: 5px 10px;
             cursor: pointer;
         }
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-        nav button {
-            background-color: #00aaff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            cursor: pointer;
-        }
-        section {
+        .sidebar {
+            width: 30%;
+            background-color: #f0f0f0;
             padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         }
-        .content {
-            max-width: 800px;
-            margin: auto;
+        .sidebar h2 {
+            color: #000000;
         }
-        h2 {
-            color: #00aaff;
+        .sidebar p {
+            margin: 5px 0;
         }
-        p {
-            line-height: 1.6;
+        .sidebar nav a {
+            display: block;
+            color: #000000;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        .sidebar nav a:hover {
+            background-color: #d0d0d0;
+        }
+        .main-content {
+            width: 70%;
+            padding: 20px;
         }
         .grid-container {
             display: grid;
@@ -65,10 +69,11 @@
             gap: 20px;
         }
         .grid-item {
-            background-color: #2a2a2a;
+            background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
             transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .grid-item:hover {
             transform: scale(1.05);
@@ -78,28 +83,29 @@
             height: auto;
         }
         .contact-form {
-            background-color: #2a2a2a;
+            background-color: #f0f0f0;
             padding: 20px;
             margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: none;
-            background-color: #333;
-            color: #f0f0f0;
+            border: 1px solid #d0d0d0;
+            background-color: #ffffff;
+            color: #000000;
         }
         .contact-form button {
-            background-color: #00aaff;
-            color: #fff;
+            background-color: #000000;
+            color: #ffffff;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
         }
         footer {
-            background-color: #333;
-            color: #f0f0f0;
+            background-color: #f0f0f0;
+            color: #000000;
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -128,65 +134,62 @@
             <button onclick="switchLanguage('en')">English</button>
         </div>
     </header>
-    <section>
-        <div class="content">
-            <h2 data-lang="es">Sobre Mí</h2>
-            <h2 data-lang="en" style="display:none;">About Me</h2>
-            <p data-lang="es">Soy Joaquín Mura, Doctor en Ingeniería, Master en Matemáticas Aplicadas y Físico. Mis intereses de investigación incluyen problemas inversos, elastografía, ultrasonido, imágenes médicas, modelación matemática, diseño óptimo y homogeneización.</p>
-            <p data-lang="en" style="display:none;">I am Joaquín Mura, Doctor in Engineering, Master in Applied Mathematics, and Physicist. My research interests include inverse problems, elastography, ultrasound, medical imaging, mathematical modeling, optimal design, and homogenization.</p>
-            <h2 data-lang="es">Intereses</h2>
-            <h2 data-lang="en" style="display:none;">Interests</h2>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <img src="ultrasonido.jpg" alt="Laboratorio de Ultrasonido Cuantitativo">
-                    <h3 data-lang="es">Laboratorio de Ultrasonido Cuantitativo</h3>
-                    <h3 data-lang="en" style="display:none;">Quantitative Ultrasound Laboratory</h3>
-                    <p data-lang="es">Buscando nuevos biomarcadores</p>
-                    <p data-lang="en" style="display:none;">Searching for new biomarkers</p>
+    <div class="sidebar">
+        <h2>Joaquín Mura</h2>
+        <p>Profesor</p>
+        <p>Departamento de Ingeniería Mecánica</p>
+        <p>Universidad Técnica Federico Santa María</p>
+        <nav>
+            <a href="#experience" data-lang="es">Mi experiencia</a>
+            <a href="#experience" data-lang="en" style="display:none;">My Experience</a>
+            <a href="#contact" data-lang="es">Contacto</a>
+            <a href="#contact" data-lang="en" style="display:none;">Contact</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <section>
+            <div class="content">
+                <h2 data-lang="es">Sobre Mí</h2>
+                <h2 data-lang="en" style="display:none;">About Me</h2>
+                <p data-lang="es">Soy Joaquín Mura, Doctor en Ingeniería, Master en Matemáticas Aplicadas y Físico. Mis intereses de investigación incluyen problemas inversos, elastografía, ultrasonido, imágenes médicas, modelación matemática, diseño óptimo y homogeneización.</p>
+                <p data-lang="en" style="display:none;">I am Joaquín Mura, Doctor in Engineering, Master in Applied Mathematics, and Physicist. My research interests include inverse problems, elastography, ultrasound, medical imaging, mathematical modeling, optimal design, and homogenization.</p>
+                <h2 data-lang="es">Intereses</h2>
+                <h2 data-lang="en" style="display:none;">Interests</h2>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="ultrasonido.jpg" alt="Laboratorio de Ultrasonido Cuantitativo">
+                        <h3 data-lang="es">Laboratorio de Ultrasonido Cuantitativo</h3>
+                        <h3 data-lang="en" style="display:none;">Quantitative Ultrasound Laboratory</h3>
+                        <p data-lang="es">Buscando nuevos biomarcadores</p>
+                        <p data-lang="en" style="display:none;">Searching for new biomarkers</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagenes_medicas.jpg" alt="Métodos para Imágenes Médicas">
+                        <h3 data-lang="es">Métodos para Imágenes Médicas</h3>
+                        <h3 data-lang="en" style="display:none;">Medical Imaging Methods</h3>
+                        <p data-lang="es">Nuevas técnicas empleando matemáticas aplicadas</p>
+                        <p data-lang="en" style="display:none;">New techniques using applied mathematics</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="ingenieria_mecanica.jpg" alt="Ingeniería Mecánica">
+                        <h3 data-lang="es">Ingeniería Mecánica</h3>
+                        <h3 data-lang="en" style="display:none;">Mechanical Engineering</h3>
+                        <p data-lang="es">Cursos, información, otros</p>
+                        <p data-lang="en" style="display:none;">Courses, information, others</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="problemas_inversos.jpg" alt="Problemas Inversos y Diseño Óptimo">
+                        <h3 data-lang="es">Problemas Inversos y Diseño Óptimo</h3>
+                        <h3 data-lang="en" style="display:none;">Inverse Problems and Optimal Design</h3>
+                        <p data-lang="es">Usando matemáticas aplicadas para la detección de defectos/inclusiones y sobre cómo mejorar la forma de los objetos</p>
+                        <p data-lang="en" style="display:none;">Using applied mathematics for defect/inclusion detection and improving object shapes</p>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <img src="imagenes_medicas.jpg" alt="Métodos para Imágenes Médicas">
-                    <h3 data-lang="es">Métodos para Imágenes Médicas</h3>
-                    <h3 data-lang="en" style="display:none;">Medical Imaging Methods</h3>
-                    <p data-lang="es">Nuevas técnicas empleando matemáticas aplicadas</p>
-                    <p data-lang="en" style="display:none;">New techniques using applied mathematics</p>
-                </div>
-                <div class="grid-item">
-                    <img src="ingenieria_mecanica.jpg" alt="Ingeniería Mecánica">
-                    <h3 data-lang="es">Ingeniería Mecánica</h3>
-                    <h3 data-lang="en" style="display:none;">Mechanical Engineering</h3>
-                    <p data-lang="es">Cursos, información, otros</p>
-                    <p data-lang="en" style="display:none;">Courses, information, others</p>
-                </div>
-                <div class="grid-item">
-                    <img src="problemas_inversos.jpg" alt="Problemas Inversos y Diseño Óptimo">
-                    <h3 data-lang="es">Problemas Inversos y Diseño Óptimo</h3>
-                    <h3 data-lang="en" style="display:none;">Inverse Problems and Optimal Design</h3>
-                    <p data-lang="es">Usando matemáticas aplicadas para la detección de defectos/inclusiones y sobre cómo mejorar la forma de los objetos</p>
-                    <p data-lang="en" style="display:none;">Using applied mathematics for defect/inclusion detection and improving object shapes</p>
-                </div>
-            </div>
-            <h2 data-lang="es">Mi Experiencia</h2>
-            <h2 data-lang="en" style="display:none;">My Experience</h2>
-            <p data-lang="es">Tengo una amplia experiencia en investigación y docencia en el campo de la ingeniería y las matemáticas aplicadas. He trabajado en diversos proyectos que abarcan desde la modelación matemática hasta la implementación de nuevas técnicas en imágenes médicas.</p>
-            <p data-lang="en" style="display:none;">I have extensive experience in research and teaching in the field of engineering and applied mathematics. I have worked on various projects ranging from mathematical modeling to the implementation of new techniques in medical imaging.</p>
-            <div class="contact-form">
-                <h2 data-lang="es">¿Quieres contactarme? Escríbeme una línea</h2>
-                <h2 data-lang="en" style="display:none;">Want to contact me? Drop me a line</h2>
-                <form action="mailto:joaquin.mura@gmail.com" method="post" enctype="text/plain">
-                    <input type="text" name="name" placeholder="Nombre" data-lang="es">
-                    <input type="text" name="name" placeholder="Name" data-lang="en" style="display:none;">
-                    <input type="email" name="email" placeholder="Email">
-                    <textarea name="message" placeholder="Mensaje" data-lang="es"></textarea>
-                    <textarea name="message" placeholder="Message" data-lang="en" style="display:none;"></textarea>
-                    <button type="submit" data-lang="es">Enviar</button>
-                    <button type="submit" data-lang="en" style="display:none;">Send</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>Contacto: joaquin.mura@example.com</p>
-    </footer>
-</body>
-</html>
+                <h2 id="experience" data-lang="es">Mi Experiencia</h2>
+                <h2 id="experience" data-lang="en" style="display:none;">My Experience</h2>
+                <p data-lang="es">Tengo una amplia experiencia en investigación y docencia en el campo de la ingeniería y las matemáticas aplicadas. He trabajado en diversos proyectos que abarcan desde la modelación matemática hasta la implementación de nuevas técnicas en imágenes médicas.</p>
+                <p data-lang="en" style="display:none;">I have extensive experience in research and teaching in the field of engineering and applied mathematics. I have worked on various projects ranging from mathematical modeling to the implementation of new techniques in medical imaging.</p>
+                <div class="contact-form" id="contact">
+                    <h2 data-lang="es">¿Quieres contactarme? Escríbeme una línea</h2>
+                    <h2 data-lang="en" style="display:none;">Want to contact me? Drop me a line</h2>
+                    <form action="mailto:joaquin.mura@gmail.com
