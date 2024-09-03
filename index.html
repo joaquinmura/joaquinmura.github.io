@@ -8,13 +8,13 @@
         body { font-family: 'Arial', sans-serif; background-color: #ffffff; color: #000000; margin: 0; padding: 0; display: flex; flex-direction: column; }
         .language-switch { position: absolute; top: 20px; right: 20px; }
         .language-switch button { background-color: #000000; color: #ffffff; border: none; padding: 5px 10px; cursor: pointer; }
-        .container { display: flex; flex-direction: row; flex-wrap: wrap; }
-        .sidebar { width: 30%; background-color: #f0f0f0; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
+        .container { display: flex; flex-direction: row; } /*flex-wrap: wrap; }*/
+        .sidebar { width: 25%; background-color: #f0f0f0; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
         .sidebar h2 { color: #000000; }
         .sidebar p { margin: 5px 0; }
         .sidebar nav a { display: block; color: #000000; text-decoration: none; margin: 10px 0; padding: 10px; background-color: #e0e0e0; border-radius: 5px; }
         .sidebar nav a:hover { background-color: #d0d0d0; }
-        .main-content { width: 70%; padding: 20px; }
+        .main-content { width: 75%; padding: 20px; }
         .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .grid-item { background-color: #f0f0f0; padding: 20px; text-align: center; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         .grid-item:hover { transform: scale(1.05); }
@@ -44,19 +44,19 @@
         <button onclick="switchLanguage('en')">English</button>
     </div>
     <div class="container">
-        <div class="main-content">
-            <div class="sidebar">
+        <div class="sidebar">
             <h2>Joaquín Mura</h2>
             <p>Profesor</p>
             <p>Departamento de Ingeniería Mecánica</p>
             <p>Universidad Técnica Federico Santa María</p>
             <nav>
                 <a href="#experience" data-lang="es">Mi experiencia</a>
-                <a href="#experience" data-lang="en" style="display:none;">My Experience</a>
+                <a href="#experienceENG" data-lang="en" style="display:none;">My Experience</a>
                 <a href="#contact" data-lang="es">Contacto</a>
                 <a href="#contact" data-lang="en" style="display:none;">Contact</a>
             </nav>
         </div>
+        <div class="main-content">
             <section>
                 <div class="content">
                     <h2 data-lang="es">Sobre Mí</h2>
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <h2 id="experience" data-lang="es">Mi Experiencia</h2>
-                    <h2 id="experience" data-lang="en" style="display:none;">My Experience</h2>
+                    <h2 id="experienceENG" data-lang="en" style="display:none;">My Experience</h2>
                     <p data-lang="es">Tengo una amplia experiencia en investigación y docencia en el campo de la ingeniería y las matemáticas aplicadas. He trabajado en diversos proyectos que abarcan desde la modelación matemática hasta la implementación de nuevas técnicas en imágenes médicas.</p>
                     <p data-lang="en" style="display:none;">I have extensive experience in research and teaching in the field of engineering and applied mathematics. I have worked on various projects ranging from mathematical modeling to the implementation of new techniques in medical imaging.</p>
                     <div class="contact-form" id="contact">
