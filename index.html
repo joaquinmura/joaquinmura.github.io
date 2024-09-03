@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+    /* check JSFiddle for online editing! */
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,13 +103,21 @@
                     <div class="contact-form" id="contact">
                         <h2 data-lang="es">¿Quieres contactarme? Escríbeme una línea</h2>
                         <h2 data-lang="en" style="display:none;">Want to contact me? Drop me a line</h2>
-                        <form action="mailto:joaquin.mura@gmail.com" method="post" enctype="text/plain">
+
+                        /*   FORM  */
+                        /*<form action="mailto:joaquin.mura@gmail.com" method="post" enctype="text/plain">*/
+                        <form action="https://formspree.io/f/mgvwqvbw" method="POST">
+                            <label for="name">Nombre:</label> /* FORMSPREE */
                             <input type="text" name="name" placeholder="Nombre" data-lang="es">
                             <input type="text" name="name" placeholder="Name" data-lang="en" style="display:none;">
+                            <label for="email">Correo electrónico:</label>  /* FORMSPREE */
                             <input type="email" name="email" placeholder="Email">
+                            <label for="message">Mensaje:</label>  /* FORMSPREE */
                             <textarea name="message" placeholder="Mensaje" data-lang="es"></textarea>
                             <textarea name="message" placeholder="Message" data-lang="en" style="display:none;"></textarea>
+                            <button type="submit">Send</button> 
                         </form>
+                        
                     </div>
                 </div>
             </section>
