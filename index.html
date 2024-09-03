@@ -5,127 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joaquín Mura - Página Personal</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-        header h1 {
-            color: #000000;
-            margin: 0;
-        }
-        .language-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        .language-switch button {
-            background-color: #000000;
-            color: #ffffff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        .sidebar {
-            width: 30%;
-            background-color: #f0f0f0;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-        }
-        .sidebar h2 {
-            color: #000000;
-        }
-        .sidebar p {
-            margin: 5px 0;
-        }
-        .sidebar nav a {
-            display: block;
-            color: #000000;
-            text-decoration: none;
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-        }
-        .sidebar nav a:hover {
-            background-color: #d0d0d0;
-        }
-        .main-content {
-            width: 70%;
-            padding: 20px;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .grid-item {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .grid-item:hover {
-            transform: scale(1.05);
-        }
-        .grid-item img {
-            max-width: 100%;
-            height: auto;
-        }
-        .contact-form {
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #d0d0d0;
-            background-color: #ffffff;
-            color: #000000;
-        }
-        .contact-form button {
-            background-color: #000000;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #f0f0f0;
-            color: #000000;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .sidebar, .main-content {
-                width: 100%;
-            }
-        }
+        body { font-family: 'Arial', sans-serif; background-color: #ffffff; color: #000000; margin: 0; padding: 0; display: flex; flex-direction: column; }
+        .language-switch { position: absolute; top: 20px; right: 20px; }
+        .language-switch button { background-color: #000000; color: #ffffff; border: none; padding: 5px 10px; cursor: pointer; }
+        .container { display: flex; flex-direction: row; flex-wrap: wrap; }
+        .sidebar { width: 30%; background-color: #f0f0f0; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
+        .sidebar h2 { color: #000000; }
+        .sidebar p { margin: 5px 0; }
+        .sidebar nav a { display: block; color: #000000; text-decoration: none; margin: 10px 0; padding: 10px; background-color: #e0e0e0; border-radius: 5px; }
+        .sidebar nav a:hover { background-color: #d0d0d0; }
+        .main-content { width: 70%; padding: 20px; }
+        .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .grid-item { background-color: #f0f0f0; padding: 20px; text-align: center; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .grid-item:hover { transform: scale(1.05); }
+        .grid-item img { max-width: 100%; height: auto; }
+        .contact-form { background-color: #f0f0f0; padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #d0d0d0; background-color: #ffffff; color: #000000; }
+        .contact-form button { background-color: #000000; color: #ffffff; border: none; padding: 10px 20px; cursor: pointer; }
+        footer { background-color: #f0f0f0; color: #000000; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+        @media (max-width: 768px) { .container { flex-direction: column; } .sidebar, .main-content { width: 100%; } }
     </style>
     <script>
         function switchLanguage(lang) {
@@ -141,13 +39,10 @@
     </script>
 </head>
 <body onload="switchLanguage('es')">
-    <header>
-        <h1>Joaquín Mura</h1>
-        <div class="language-switch">
-            <button onclick="switchLanguage('es')">Español</button>
-            <button onclick="switchLanguage('en')">English</button>
-        </div>
-    </header>
+    <div class="language-switch">
+        <button onclick="switchLanguage('es')">Español</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
     <div class="container">
         <div class="sidebar">
             <h2>Joaquín Mura</h2>
@@ -205,6 +100,19 @@
                     <p data-lang="es">Tengo una amplia experiencia en investigación y docencia en el campo de la ingeniería y las matemáticas aplicadas. He trabajado en diversos proyectos que abarcan desde la modelación matemática hasta la implementación de nuevas técnicas en imágenes médicas.</p>
                     <p data-lang="en" style="display:none;">I have extensive experience in research and teaching in the field of engineering and applied mathematics. I have worked on various projects ranging from mathematical modeling to the implementation of new techniques in medical imaging.</p>
                     <div class="contact-form" id="contact">
-                    <h2 data-lang="es">¿Quieres contactarme? Escríbeme una línea</h2>
-                    <h2 data-lang="en" style="display:none;">Want to contact me? Drop me a line</h2>
-                    <form action="mailto:joaquin.mura@gmail.com
+                        <h2 data-lang="es">¿Quieres contactarme? Escríbeme una línea</h2>
+                        <h2 data-lang="en" style="display:none;">Want to contact me? Drop me a line</h2>
+                        <form action="mailto:joaquin.mura@gmail.com" method="post" enctype="text/plain">
+                            <input type="text" name="name" placeholder="Nombre" data-lang="es">
+                            <input type="text" name="name" placeholder="Name" data-lang="en" style="display:none;">
+                            <input type="email" name="email" placeholder="Email">
+                            <textarea name="message" placeholder="Mensaje" data-lang="es"></textarea>
+                            <textarea name="message" placeholder="Message" data-lang="en" style="display:none;"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
