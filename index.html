@@ -6,7 +6,7 @@
     <title>Joaquín Mura - Página Personal</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #1a1a1a;
             color: #f0f0f0;
             margin: 0;
@@ -19,6 +19,18 @@
         }
         header h1 {
             color: #00aaff;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav button {
+            background-color: #00aaff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
         }
         section {
             padding: 20px;
@@ -42,17 +54,6 @@
             width: 100%;
             bottom: 0;
         }
-        .language-switch {
-            text-align: right;
-            padding: 10px;
-        }
-        .language-switch button {
-            background-color: #00aaff;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
     </style>
     <script>
         function switchLanguage(lang) {
@@ -69,14 +70,14 @@
 </head>
 <body onload="switchLanguage('es')">
     <header>
-        <div class="language-switch">
-            <button onclick="switchLanguage('es')">Español</button>
-            <button onclick="switchLanguage('en')">English</button>
-        </div>
         <h1>Joaquín Mura</h1>
         <p data-lang="es">Doctor en Ingeniería | Master en Matemáticas Aplicadas | Físico</p>
         <p data-lang="en" style="display:none;">Doctor in Engineering | Master in Applied Mathematics | Physicist</p>
     </header>
+    <nav>
+        <button onclick="switchLanguage('es')">Español</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </nav>
     <section>
         <div class="content">
             <h2 data-lang="es">Sobre Mí</h2>
