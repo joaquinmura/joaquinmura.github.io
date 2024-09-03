@@ -16,9 +16,23 @@
             background-color: #333;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
         header h1 {
             color: #00aaff;
+            margin: 0;
+        }
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-switch button {
+            background-color: #00aaff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
         }
         nav {
             text-align: center;
@@ -63,15 +77,6 @@
             max-width: 100%;
             height: auto;
         }
-        footer {
-            background-color: #333;
-            color: #f0f0f0;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
         .contact-form {
             background-color: #2a2a2a;
             padding: 20px;
@@ -92,6 +97,15 @@
             padding: 10px 20px;
             cursor: pointer;
         }
+        footer {
+            background-color: #333;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
     <script>
         function switchLanguage(lang) {
@@ -109,13 +123,11 @@
 <body onload="switchLanguage('es')">
     <header>
         <h1>Joaquín Mura</h1>
-        <p data-lang="es">Doctor en Ingeniería | Master en Matemáticas Aplicadas | Físico</p>
-        <p data-lang="en" style="display:none;">Doctor in Engineering | Master in Applied Mathematics | Physicist</p>
+        <div class="language-switch">
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
     </header>
-    <nav>
-        <button onclick="switchLanguage('es')">Español</button>
-        <button onclick="switchLanguage('en')">English</button>
-    </nav>
     <section>
         <div class="content">
             <h2 data-lang="es">Sobre Mí</h2>
