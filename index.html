@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joaquín Mura - Página Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #00aaff;
+        }
+        section {
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #00aaff;
+        }
+        p {
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .language-switch {
+            text-align: right;
+            padding: 10px;
+        }
+        .language-switch button {
+            background-color: #00aaff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            var elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(function(element) {
+                if (element.getAttribute('data-lang') === lang) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="switchLanguage('es')">
+    <header>
+        <div class="language-switch">
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+        <h1>Joaquín Mura</h1>
+        <p data-lang="es">Doctor en Ingeniería | Master en Matemáticas Aplicadas | Físico</p>
+        <p data-lang="en" style="display:none;">Doctor in Engineering | Master in Applied Mathematics | Physicist</p>
+    </header>
+    <section>
+        <div class="content">
+            <h2 data-lang="es">Sobre Mí</h2>
+            <h2 data-lang="en" style="display:none;">About Me</h2>
+            <p data-lang="es">Soy Joaquín Mura, Doctor en Ingeniería, Master en Matemáticas Aplicadas y Físico. Mis intereses de investigación incluyen problemas inversos, elastografía, ultrasonido, imágenes médicas, modelación matemática, diseño óptimo y homogeneización.</p>
+            <p data-lang="en" style="display:none;">I am Joaquín Mura, Doctor in Engineering, Master in Applied Mathematics, and Physicist. My research interests include inverse problems, elastography, ultrasound, medical imaging, mathematical modeling, optimal design, and homogenization.</p>
+            <h2 data-lang="es">Intereses</h2>
+            <h2 data-lang="en" style="display:none;">Interests</h2>
+            <ul data-lang="es">
+                <li>Problemas Inversos</li>
+                <li>Elastografía</li>
+                <li>Ultrasonido</li>
+                <li>Imágenes Médicas</li>
+                <li>Modelación Matemática</li>
+                <li>Diseño Óptimo</li>
+                <li>Homogeneización</li>
+            </ul>
+            <ul data-lang="en" style="display:none;">
+                <li>Inverse Problems</li>
+                <li>Elastography</li>
+                <li>Ultrasound</li>
+                <li>Medical Imaging</li>
+                <li>Mathematical Modeling</li>
+                <li>Optimal Design</li>
+                <li>Homogenization</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>Contacto: joaquin.mura@example.com</p>
+    </footer>
+</body>
+</html>
