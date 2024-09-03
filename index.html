@@ -45,6 +45,24 @@
         p {
             line-height: 1.6;
         }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .grid-item {
+            background-color: #2a2a2a;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+        }
         footer {
             background-color: #333;
             color: #f0f0f0;
@@ -53,6 +71,26 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .contact-form {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        .contact-form button {
+            background-color: #00aaff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
         }
     </style>
     <script>
@@ -86,24 +124,53 @@
             <p data-lang="en" style="display:none;">I am Joaquín Mura, Doctor in Engineering, Master in Applied Mathematics, and Physicist. My research interests include inverse problems, elastography, ultrasound, medical imaging, mathematical modeling, optimal design, and homogenization.</p>
             <h2 data-lang="es">Intereses</h2>
             <h2 data-lang="en" style="display:none;">Interests</h2>
-            <ul data-lang="es">
-                <li>Problemas Inversos</li>
-                <li>Elastografía</li>
-                <li>Ultrasonido</li>
-                <li>Imágenes Médicas</li>
-                <li>Modelación Matemática</li>
-                <li>Diseño Óptimo</li>
-                <li>Homogeneización</li>
-            </ul>
-            <ul data-lang="en" style="display:none;">
-                <li>Inverse Problems</li>
-                <li>Elastography</li>
-                <li>Ultrasound</li>
-                <li>Medical Imaging</li>
-                <li>Mathematical Modeling</li>
-                <li>Optimal Design</li>
-                <li>Homogenization</li>
-            </ul>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="ultrasonido.jpg" alt="Laboratorio de Ultrasonido Cuantitativo">
+                    <h3 data-lang="es">Laboratorio de Ultrasonido Cuantitativo</h3>
+                    <h3 data-lang="en" style="display:none;">Quantitative Ultrasound Laboratory</h3>
+                    <p data-lang="es">Buscando nuevos biomarcadores</p>
+                    <p data-lang="en" style="display:none;">Searching for new biomarkers</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagenes_medicas.jpg" alt="Métodos para Imágenes Médicas">
+                    <h3 data-lang="es">Métodos para Imágenes Médicas</h3>
+                    <h3 data-lang="en" style="display:none;">Medical Imaging Methods</h3>
+                    <p data-lang="es">Nuevas técnicas empleando matemáticas aplicadas</p>
+                    <p data-lang="en" style="display:none;">New techniques using applied mathematics</p>
+                </div>
+                <div class="grid-item">
+                    <img src="ingenieria_mecanica.jpg" alt="Ingeniería Mecánica">
+                    <h3 data-lang="es">Ingeniería Mecánica</h3>
+                    <h3 data-lang="en" style="display:none;">Mechanical Engineering</h3>
+                    <p data-lang="es">Cursos, información, otros</p>
+                    <p data-lang="en" style="display:none;">Courses, information, others</p>
+                </div>
+                <div class="grid-item">
+                    <img src="problemas_inversos.jpg" alt="Problemas Inversos y Diseño Óptimo">
+                    <h3 data-lang="es">Problemas Inversos y Diseño Óptimo</h3>
+                    <h3 data-lang="en" style="display:none;">Inverse Problems and Optimal Design</h3>
+                    <p data-lang="es">Usando matemáticas aplicadas para la detección de defectos/inclusiones y sobre cómo mejorar la forma de los objetos</p>
+                    <p data-lang="en" style="display:none;">Using applied mathematics for defect/inclusion detection and improving object shapes</p>
+                </div>
+            </div>
+            <h2 data-lang="es">Mi Experiencia</h2>
+            <h2 data-lang="en" style="display:none;">My Experience</h2>
+            <p data-lang="es">Tengo una amplia experiencia en investigación y docencia en el campo de la ingeniería y las matemáticas aplicadas. He trabajado en diversos proyectos que abarcan desde la modelación matemática hasta la implementación de nuevas técnicas en imágenes médicas.</p>
+            <p data-lang="en" style="display:none;">I have extensive experience in research and teaching in the field of engineering and applied mathematics. I have worked on various projects ranging from mathematical modeling to the implementation of new techniques in medical imaging.</p>
+            <div class="contact-form">
+                <h2 data-lang="es">¿Quieres contactarme? Escríbeme una línea</h2>
+                <h2 data-lang="en" style="display:none;">Want to contact me? Drop me a line</h2>
+                <form action="mailto:joaquin.mura@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Nombre" data-lang="es">
+                    <input type="text" name="name" placeholder="Name" data-lang="en" style="display:none;">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Mensaje" data-lang="es"></textarea>
+                    <textarea name="message" placeholder="Message" data-lang="en" style="display:none;"></textarea>
+                    <button type="submit" data-lang="es">Enviar</button>
+                    <button type="submit" data-lang="en" style="display:none;">Send</button>
+                </form>
+            </div>
         </div>
     </section>
     <footer>
