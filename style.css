@@ -1,0 +1,81 @@
+
+
+body { 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    background-color: #fcfcfc; color: #2e2b3b; 
+    margin: 0; padding: 0; display: flex; flex-direction: column; 
+}
+.language-switch { 
+    position: absolute; top: 20px; right: 20px; 
+}
+.language-switch button { 
+    background-color: #230d55; color: #e7eaf6; 
+    border: none; padding: 5px 10px; cursor: pointer; 
+}
+.container { 
+    display: flex; flex-direction: row; 
+}
+.sidebar { 
+    width: 25%; background-color: #778da9; /* #e0e1dd; */
+    padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
+}
+.sidebar h2 { 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f7f7f7; /* color encabezado nombre*/
+}
+.sidebar p { 
+    margin: 5px 0; 
+    color:#f7f7f7;
+}
+.sidebar nav a { 
+    display: block; 
+    color: #fcfcfc; background-color: #415a77; 
+    text-decoration: none; margin: 10px 0; padding: 10px; 
+    border-radius: 5px; 
+}
+.sidebar nav a:hover { 
+    background-color: #1b263b; /* color boton en seleccion*/
+}
+.main-content { 
+    width: 80%; padding: 20px; 
+}
+.grid-container { 
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; 
+}
+.grid-item { 
+    color:#f7f7f7;
+    background-color: #778da9; /* #f0f0f0; */
+    padding: 10px; text-align: center; 
+    transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+.grid-item a {
+    color:#f7f7f7;
+}
+.grid-item:hover { 
+    transform: scale(1.05); 
+    background-color: #1b263b;
+    box-shadow: 10 4px 80px rgba(0,0,0,0.1); 
+}
+.grid-item img { 
+    max-width: 100%; height: auto; 
+    border-radius: 8px;
+    opacity: 0.5;
+}
+.contact-form { 
+    background-color: #f0f0f0; 
+    padding: 20px; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+.contact-form input, .contact-form textarea { 
+    width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #d0d0d0; 
+    background-color: #ffffff; color: #000000; 
+}
+.contact-form button { 
+    background-color: #000000; color: #ffffff; border: none; padding: 10px 20px; cursor: pointer; 
+}
+footer { 
+    background-color: #f0f0f0; color: #000000; 
+    text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; 
+}
+@media (max-width: 768px) { 
+    .container { flex-direction: column; } .sidebar, .main-content { width: 100%; } 
+}
