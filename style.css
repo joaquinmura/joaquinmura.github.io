@@ -1,12 +1,28 @@
-
+/*  color palette: https://coolors.co/palettes/trending
+gray to black passing through dark blues:
+#e0e1dd   *light gray*
+#778da9
+#415a77   *middle blue navy*
+#1b263b
+#0d1b2a   *almost black*
+*/
 
 body { 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     background-color: #fcfcfc; color: #2e2b3b; 
     margin: 0; padding: 0; display: flex; flex-direction: column; 
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #778da9;
+    color: #fff;
+    padding: 2px;
+}
 .language-switch { 
-    position: absolute; top: 20px; right: 20px; 
+    position: absolute; top: 10px; right: 20px; 
 }
 .language-switch button { 
     background-color: #230d55; color: #e7eaf6; 

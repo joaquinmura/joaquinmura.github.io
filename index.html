@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joaquín Mura - Página Personal</title>
+
     <link rel="stylesheet" href="style.css" /> <!-- carga estilo CSS -->
 
     <script src="script_lang.js"></script>
@@ -14,11 +15,16 @@
 <!--  BODY  -->
 
 <body onload="switchLanguage('es')">
-    <div class="language-switch">
-        <button onclick="switchLanguage('es')">Español</button>
-        <button onclick="switchLanguage('en')">English</button>
-    </div>
+    <header>
+        <div class="language-switch">
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+    </header>
+
     <div class="container">
+
+        <!-- barra lateral -->
         <div class="sidebar">
             <h2>Joaquín Mura</h2>
             <p data-lang="es">Profesor</p>
@@ -27,7 +33,9 @@
                 <p data-lang="es"> Departamento de Ingeniería Mecánica</p>
                 <p data-lang="en">Departament of Mechanical Engineering</p>
             </a>
-            <p>Universidad Técnica Federico Santa María</p>
+            <a href="https://www.usm.cl/">
+                <p>Universidad Técnica Federico Santa María</p>
+            </a>
             <nav>
                 <a href="#experience" data-lang="es">Mi experiencia</a>
                 <a href="#experienceENG" data-lang="en" style="display:none;">My Experience</a>
@@ -35,6 +43,8 @@
                 <a href="#contact" data-lang="en" style="display:none;">Contact</a>
             </nav>
         </div>
+
+        <!-- Bloque derecho -->
         <div class="main-content">
             <section>
                 <div class="content">
@@ -42,8 +52,16 @@
                     <h2 data-lang="es">Sobre Mí</h2>
                     <h2 data-lang="en" style="display:none;">About Me</h2>
                     
-                    <p data-lang="es">Soy Joaquín Mura, Doctor en Ingeniería, Master en Matemáticas Aplicadas y Físico. Mis intereses de investigación incluyen problemas inversos, elastografía, ultrasonido, imágenes médicas, modelación matemática, diseño óptimo, homogeneización de pequeña amplitud, y homogeneización a dos escalas.</p>
-                    <p data-lang="en" style="display:none;">I am Joaquín Mura, Doctor in Science and Engineering, Master in Applied Mathematics, and Physicist. My research interests include inverse problems, elastography, ultrasound, medical imaging, mathematical modeling, optimal design, two-scale homogenization, and small amplitude homogenization.</p>
+                    <p data-lang="es">Soy Joaquín Mura, Doctor en Ingeniería, Master en Matemáticas Aplicadas 
+                        y Físico. Mis intereses de investigación incluyen problemas inversos, elastografía, ultrasonido, 
+                        imágenes médicas, modelación matemática, diseño óptimo, sensibilidad respecto de la forma 
+                        (<i>derivada respecto de la forma</i>) y métodos de curvas de nivel, homogeneización de pequeña amplitud, 
+                        y homogeneización a dos escalas.</p>
+                    <p data-lang="en" style="display:none;">I am Joaquín Mura, Doctor in Science and Engineering, 
+                        Master in Applied Mathematics, and Physicist. My research interests include inverse problems, 
+                        elastography, ultrasound, medical imaging, mathematical modeling, optimal design, shape sensitivity analysis 
+                        (<i>shape derivative</i>) and Levelsets methods,
+                        two-scale homogenization, and small amplitude homogenization.</p>
                     
                     <!-- Intereses: Reticulado  -->
                     <h2 data-lang="es">Intereses</h2>
